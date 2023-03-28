@@ -1,0 +1,28 @@
+package produto;
+
+public class Produto_Principal {
+
+	public static void main(String[] args) {
+		 	
+		    Produto produto1 = new Produto("Camisa",1);
+		    
+		    Produto produto2 = new Produto("Calça", 8);
+
+		    // Exibindo informações dos produtos
+		    System.out.println("Produto 1:");
+		    System.out.println("Nome: " + produto1.getNome());
+		    System.out.println("Preço: R$" + produto1);
+		   
+
+		    System.out.println("Produto 2:");
+		    System.out.println("Nome: " + produto2);
+		    System.out.println("Preço: R$" + produto2);
+		   
+
+		  
+		    
+		  
+		    
+	}
+
+}

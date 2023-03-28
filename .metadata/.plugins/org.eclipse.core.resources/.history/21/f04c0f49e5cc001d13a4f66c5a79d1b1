@@ -1,0 +1,9 @@
+package produto;
+
+public class Produto extends Produto_Principal{
+
+	
+	private String nome;
+	private double preço;
+
+}
