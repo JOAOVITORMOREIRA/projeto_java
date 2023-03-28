@@ -5,5 +5,5 @@
  * @author bkaua
  *
  */
-module Produto_Principal {
+module Produto_super {
 }
