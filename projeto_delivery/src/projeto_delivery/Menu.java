@@ -30,7 +30,7 @@ Scanner leia = new Scanner(System.in);
 			System.out.println("                                                 ");
 			System.out.println("*************************************************");
 			System.out.println("                                                 ");
-			System.out.println("Digite a opição desejada:                        ");
+			System.out.println("Digite a opção desejada:                         ");
 			System.out.println("                                                 ");
 			
 			opcao = leia.nextInt();
@@ -125,7 +125,7 @@ Scanner leia = new Scanner(System.in);
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Yngrid Padilha                                ");
-		System.out.println("   GitHub:                                       ");
+		System.out.println("   GitHub: https://github.com/yngridp            ");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("                                                 ");
