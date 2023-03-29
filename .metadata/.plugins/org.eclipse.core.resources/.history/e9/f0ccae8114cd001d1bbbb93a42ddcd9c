@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author bkaua
- *
- */
-module Produto {
-}
