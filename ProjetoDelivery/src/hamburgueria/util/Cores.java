@@ -1,4 +1,4 @@
-package hamburgueria;
+package hamburgueria.util;
 
 public class Cores {
 	

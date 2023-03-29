@@ -2,6 +2,8 @@ package hamburgueria;
 
 import java.util.Scanner;
 
+import hamburgueria.util.Cores;
+
 public class menu {
 	
 	public static void main(String[] args) {

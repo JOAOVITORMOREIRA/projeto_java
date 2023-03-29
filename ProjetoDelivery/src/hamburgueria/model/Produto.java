@@ -1,6 +1,6 @@
-package produto;
+package hamburgueria.model;
 
-public class ProdutoS {
+public class Produto {
 	
 	private String nome;
     private double preco;
