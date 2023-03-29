@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+<<<<<<<< HEAD:Produto_super/.project
+	<name>Produto_super</name>
+========
+	<name>ProjetoDelivery</name>
+>>>>>>>> 2a451d993ef1011f6d4f983f543c9d4efa4eaaf3:ProjetoDelivery/.project
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>
