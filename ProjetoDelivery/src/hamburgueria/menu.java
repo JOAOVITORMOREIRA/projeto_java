@@ -2,6 +2,7 @@ package hamburgueria;
 
 import java.util.Scanner;
 
+import hamburgueria.model.ClientePF;
 import hamburgueria.util.Cores;
 
 public class menu {
@@ -13,6 +14,9 @@ Scanner leia = new Scanner(System.in);
 		int opcao;
 		String cliente, endereco, telefone, cpf, pedido;
 		float valor;
+		
+		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222", "111.222.333-44");
+		pf1.visualizar();
 		
 		while(true) {
 			
@@ -131,7 +135,7 @@ Scanner leia = new Scanner(System.in);
 		System.out.println("                                                                                                                                                                                                                                                 ");
 		System.out.println("*************************************************                                                                                                                                                                                                ");
 		System.out.println("   Yngrid Padilha                                                                                                                                                                                                                                ");
-		System.out.println("   GitHub:                                                                                                                                                                                                                                       ");
+		System.out.println("   GitHub: https://github.com/yngridp                                                                                                                                                                                                            ");
 		System.out.println("                                                                                                                                                                                                                                                 ");
 		System.out.println("*************************************************                                                                                                                                                                                                ");
 		System.out.println("                                                                                                                                                                                                                                                 ");
