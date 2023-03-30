@@ -15,13 +15,23 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
-		String cliente, endereco, telefone, cpf, pedido;
+		String cliente, endereco, telefone, cpf, pedido,email;
 		float valor;
 
 		//testes
-		ClientePF pf1 = new ClientePF(01, "JoÃ£o Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",
-				"111.222.333-44");
+		ClientePF pf1 = new ClientePF(01, "João Vitor", "rua 1 n1, jaragua", "(11)9.1111-2222",
+				"111.222.333-44","joao@email.com");
 		pf1.visualizar();
+		
+		ClientePF pf2 = new ClientePF(02, "Maria Lucia", "Avenida Miguel Lima 404", "(11)9.9877-3214",
+				"345.222.489-44","maria_504@gmail.com");
+		pf2.visualizar();
+		
+		ClientePF pf3 = new ClientePF(02, "Bianca Souza", "rua 34-506 ", "(11)9.95516-5588",
+				"346.222.4490-45","bi_souza@gmail.com");
+		pf3.visualizar();
+		
+		
 
 		Produto po =new Produto("Xtudo",24.00);
 		po.visualizar();
@@ -105,12 +115,16 @@ public class Menu {
 				cpf = leia.nextLine();
 
 				System.out.println(
-						"Digite o endereÃ§o do cliente:                                                                                                                                                                                                 ");
+						"Digite o endereço do cliente:                                                                                                                                                                                                 ");
 				endereco = leia.nextLine();
 
 				System.out.println(
 						"Digite o telefone do cliente:                                                                                                                                                                                                 ");
 				telefone = leia.nextLine();
+				
+				System.out.println(
+						"Digite o e-mail do cliente:                                                                                                                                                                                                 ");
+				email = leia.nextLine();
 
 				keyPress();
 				break;
