@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import hamburgueria.model.ClientePF;
+import hamburgueria.model.Produto;
 import hamburgueria.util.Cores;
 
 public class Menu {
@@ -17,10 +18,15 @@ public class Menu {
 		String cliente, endereco, telefone, cpf, pedido;
 		float valor;
 
+		//testes
 		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",
 				"111.222.333-44");
 		pf1.visualizar();
 
+		Produto po =new Produto("Xtudo",24.00);
+		po.visualizar();
+		
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND

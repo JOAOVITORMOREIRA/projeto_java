@@ -1,11 +1,13 @@
 package hamburgueria.model;
 
+import java.text.NumberFormat;
+
 public class Produto {
 	
 	private String nome;
     private double preco;
 
-    public void Produto (String nome, double preco) {
+    public  Produto (String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }
@@ -23,10 +25,13 @@ public class Produto {
     }
 
     public void visualizar() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Preço: " + preco);
+        System.out.println("Nome do produto: " + nome);
+        System.out.println("Preço do produto: " + formatarPreco());
     }
-
+    public String formatarPreco() {
+        NumberFormat formatador = NumberFormat.getCurrencyInstance();
+        return formatador.format(preco);
+    }
 	
 
 }
