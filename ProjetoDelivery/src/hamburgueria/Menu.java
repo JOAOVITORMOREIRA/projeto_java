@@ -17,8 +17,8 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao;
-		String cliente, endereco, telefone, cpf, pedido;
+		int opcao,pedido;
+		String cliente, endereco, telefone, cpf;
 		float valor;
 		boolean seguir = true;
 
