@@ -19,7 +19,7 @@ public class Menu {
 		float valor;
 
 		//testes
-		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",
+		ClientePF pf1 = new ClientePF(01, "JoÃ£o Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",
 				"111.222.333-44");
 		pf1.visualizar();
 
@@ -37,7 +37,7 @@ public class Menu {
 			System.out.println(
 					"                                                                                                                                                                                                                                                 ");
 			System.out.println(
-					"        🍔     HAMBURGUERIA SIRIGUEIJO      🍔                                                                                                                                                                                                                                                    ");
+					"        ðŸ�”     HAMBURGUERIA SIRIGUEIJO      ðŸ�”                                                                                                                                                                                                                                                    ");
 			System.out.println(
 					"                                                                                                                                                                                                                                                                                                 ");
 			System.out.println(
@@ -47,17 +47,19 @@ public class Menu {
 			System.out.println(
 					"              1-Cadastrar Clientes                                                                                                                                                                                                                                                               ");
 			System.out.println(
-					"              2-Fazer Pedido                                                                                                                                                                                                                                                                     ");
+					"              2-Procurar cliente por Id                                                                                                                                                                                                                                                                   ");
 			System.out.println(
-					"              3-Valor do Pedido                                                                                                                                                                                                                                                                  ");
+					"              3-Listar Todos os Clientes                                                                                                                                                                                                                                                                ");
 			System.out.println(
-					"              4-Listar Todos os Pedidos                                                                                                                                                                                                                                                          ");
+					"              4-Atualizar cliente                                                                                                                                                                                                                                                       ");
 			System.out.println(
-					"              5-Listar Todos os Clientes                                                                                                                                                                                                                                                         ");
+					"              5-Fazer Pedido                                                                                                                                                                                                                                                        ");
 			System.out.println(
-					"              6-Cancelar Pedido                                                                                                                                                                                                                                                                  ");
+					"              6-Listar Todos os Pedidos                                                                                                                                                                                                                                                                ");
 			System.out.println(
-					"              7-Sair                                                                                                                                                                                                                                                                             ");
+					"              7-Cancelar Pedido                                                                                                                                                                                                                                                                             ");
+			System.out.println(
+					"              8-Sair                                                                                                                                                                                                                                                                             ");
 			System.out.println(
 					"                                                                                                                                                                                                                                                                                                 ");
 			System.out.println(
@@ -68,7 +70,7 @@ public class Menu {
 					"Digite a opção desejada:                                                                                                                                                                                                                                                                        ");
 			System.out.println(
 					"                                                                                                                                                                                                                                                                                                 ");
-
+			
 			try {
 				opcao = leia.nextInt();
 			} catch (InputMismatchException e) {
@@ -77,7 +79,7 @@ public class Menu {
 				opcao = 0;
 			}
 
-			if (opcao == 7) {
+			if (opcao == 8) {
 				System.out.println(Cores.TEXT_YELLOW
 						+ "\nHamburgueria Sirigueijo: Aqui Gostamos de Dinheiro!$$                                                                                                                                                                                                                                                ");
 				System.out.println(Cores.TEXT_CYAN
@@ -103,7 +105,7 @@ public class Menu {
 				cpf = leia.nextLine();
 
 				System.out.println(
-						"Digite o endereço do cliente:                                                                                                                                                                                                 ");
+						"Digite o endereÃ§o do cliente:                                                                                                                                                                                                 ");
 				endereco = leia.nextLine();
 
 				System.out.println(
@@ -115,40 +117,46 @@ public class Menu {
 
 			case 2:
 				System.out.println(
-						"Fazer Pedido\n                                                                                                                                                                                                ");
+						"Procurar cliente por Id\n                                                                                                                                                                                                ");
 
 				System.out.println(
-						"Digite o pedido do cliente:                                                                                                                                                                                                 ");
+						"Digite o id do cliente:                                                                                                                                                                                                 ");
 				leia.skip("\\R");
-				pedido = leia.nextLine();
+				//idCliente = leia.nextLine();
 
 				keyPress();
 				break;
 
 			case 3:
 				System.out.println(
-						"Valor do Pedido\n                                                                                                                                                                                                ");
+						"Listar Todos os Clientes\n                                                                                                                                                                                                ");
 
 				keyPress();
 				break;
 
 			case 4:
 				System.out.println(
-						"Listar todos os pedidos\n                                                                                                                                                                                                ");
+						"Atualizar cliente\n                                                                                                                                                                                                ");
 
 				keyPress();
 				break;
 
 			case 5:
 				System.out.println(
-						"Listar os clientes\n                                                                                                                                                                                                ");
+						"Fazer Pedido\n                                                                                                                                                                                                ");
 
 				keyPress();
 				break;
 
 			case 6:
 				System.out.println(
-						"Cancelar pedido\n                                                                                                                                                                                                ");
+						"Listar Todos os Pedidos\n                                                                                                                                                                                                ");
+
+				keyPress();
+				break;
+			case 7:
+				System.out.println(
+						"Cancelar Pedido\n                                                                                                                                                                                                ");
 
 				keyPress();
 				break;
@@ -203,7 +211,7 @@ public class Menu {
 		System.out.println(
 				"*************************************************                                                                                                                                                                                                ");
 		System.out.println(
-				"   Bruno Kauã                                                                                                                                                                                                                                    ");
+				"   Bruno KauÃ£                                                                                                                                                                                                                                    ");
 		System.out.println(
 				"   Ghttps://github.com/brunokauaal                                                                                                                                                                                                               ");
 		System.out.println(
@@ -227,7 +235,7 @@ public class Menu {
 		System.out.println(
 				"*************************************************                                                                                                                                                                                                ");
 		System.out.println(
-				"   João Vitor Moreira                                                                                                                                                                                                                            ");
+				"   JoÃ£o Vitor Moreira                                                                                                                                                                                                                            ");
 		System.out.println(
 				"   GitHub: https://github.com/JOAOVITORMOREIRA                                                                                                                                                                                                   ");
 		System.out.println(
@@ -256,7 +264,7 @@ public class Menu {
 			System.out.println(Cores.TEXT_RESET + "Pressione a tecla enter para continuar...");
 			System.in.read();
 		} catch (IOException e) {
-			System.out.println("Erro de digitação!");
+			System.out.println("Erro de digitaÃ§Ã£o!");
 		}
 	}
 

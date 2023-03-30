@@ -16,18 +16,6 @@ public interface HamburgueriaRepository {
 	public void listarTodosPedidos();
 	public void deletar(int numero);
 	
-/*
- * Menu usado como base:
-1 - Cadastrar cliente
-  - Procurar cliente por Id
-2 - Listar Todos os Clientes
-3 - Atualizar cliente
 
-4 - Fazer Pedido
-5 - Listar Todos os Pedidos
-6 – Cancelar Pedido
-
-7 - Sair
-*/
 
 }
