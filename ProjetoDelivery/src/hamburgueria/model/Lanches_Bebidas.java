@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Lanches_Bebidas {
 	public static void main(String[] args) {
 	    
-	    Scanner leia = new Scanner(System.in);
-	    
-	    Clientes cliente = new Clientes();
+	    Scanner leia = new Scanner(System.in);  
 	    
 	   
 	    String[] hamburgueres = {"Burger de siri Clássico", "Burger de siri Cheddar", "Burger de siri Bacon", "Burger de siri Duplo"};
