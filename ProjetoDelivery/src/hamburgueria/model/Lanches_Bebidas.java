@@ -7,6 +7,8 @@ public class Lanches_Bebidas {
 	    
 	    Scanner leia = new Scanner(System.in);
 	    
+	    Clientes cliente = new Clientes();
+	    
 	   
 	    String[] hamburgueres = {"Burger de siri Clássico", "Burger de siri Cheddar", "Burger de siri Bacon", "Burger de siri Duplo"};
 	    double[] precosHamburgueres = {12.00, 15.00, 15.00, 20.00};
