@@ -7,6 +7,12 @@ public class Pedido {
 	private Produto produtos;
 	private int quantidadeProdutos;
 	
+	
+
+	
+	public Pedido() {
+	}
+
 	//Método construtor:
 	public Pedido(int numeroPedido, Clientes cliente, Produto produtos, int quantidadeProdutos) {
 		super();
