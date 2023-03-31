@@ -81,7 +81,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 	@Override
 	public void fazerPedido(Pedido pedido) {
 		listaPedidos.add(pedido);
-		System.out.println("Pedido número " + pedido.getNumeroPedido() + " foi criado com sucesso!");
+		//System.out.println("Pedido número " + pedido.getNumeroPedido() + " foi criado com sucesso!");
 
 	}
 

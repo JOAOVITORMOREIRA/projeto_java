@@ -252,6 +252,8 @@ public class Menu {
 
 					produto2.setNome(refrigerantes[escolhaRefrigerante - 1]);
 					produto2.setPreco(precosRefrigerantes[escolhaRefrigerante - 1]);
+					
+					totalPedido = totalPedido + precosRefrigerantes[escolhaRefrigerante - 1];
 
 					seguir = true;
 
