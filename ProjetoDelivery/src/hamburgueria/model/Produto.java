@@ -35,6 +35,11 @@ public class Produto {
         NumberFormat formatador = NumberFormat.getCurrencyInstance();
         return formatador.format(preco);
     }
+
+	
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 	
 
 }
