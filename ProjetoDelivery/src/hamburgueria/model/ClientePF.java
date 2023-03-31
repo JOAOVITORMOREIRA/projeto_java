@@ -4,8 +4,9 @@ public class ClientePF extends Clientes{
 	
 	private String cpf;
 
-	public ClientePF(int id, String nome, String email, String endereco, String telefone, String cpf) {
-		super(id, nome, email, endereco, telefone);
+	
+	public ClientePF(int id, String nome, String email, String endereco, String telefone, int tipo, String cpf) {
+		super(id, nome, email, endereco, telefone, tipo);
 		this.cpf = cpf;
 	}
 
@@ -16,7 +17,7 @@ public class ClientePF extends Clientes{
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
+
 	public void visualizar() {
 		super.visualizar();
 		System.out.println("CPF do cliente: " + this.cpf);

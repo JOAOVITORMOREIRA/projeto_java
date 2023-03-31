@@ -1,9 +1,9 @@
 package hamburgueria.controller;
 
 import java.util.ArrayList;
+
 import hamburgueria.model.Clientes;
 import hamburgueria.model.Pedido;
-
 import hamburgueria.repository.HamburgueriaRepository;
 
 public class HamburgueriaController implements HamburgueriaRepository {
@@ -67,6 +67,15 @@ public class HamburgueriaController implements HamburgueriaRepository {
 		return null;
 	}
 
+	public int retornaTipo(int id) {
+		for (var cliente : listaClientes) {
+			if (cliente.getId() == id) {
+				return cliente.getTipo();
+			}
+		}
+		return id;
+	}
+
 	// ------------ MÉTODOS DA CLASSE PEDIDO: ------------
 
 	@Override
@@ -82,6 +91,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 			pedido.visualizar();
 		}
 	}
+
 	@Override
 	public void deletar(int numeroPedido) {
 		for (Pedido pedido : listaPedidos) {
@@ -89,7 +99,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 				listaPedidos.remove(pedido);
 				System.out.println("Pedido número " + numeroPedido + " foi removido com sucesso!");
 				return;
-			}else 
+			} else
 				System.out.println("Numero do pedido não foi encontrado!");
 		}
 

@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 import hamburgueria.controller.HamburgueriaController;
 import hamburgueria.model.ClientePF;
-import hamburgueria.model.Clientes;
-import hamburgueria.model.Pedido;
 import hamburgueria.model.Produto;
 import hamburgueria.util.Cores;
 
@@ -17,23 +15,22 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao,pedido;
-		String cliente, endereco, telefone, cpf, email;
+		int opcao,pedido, tipo, id;
+		String cliente, endereco, telefone, cpf, email, nome;
 
 		float valor;
 		boolean seguir = true;
+		
+		HamburgueriaController clientes = new HamburgueriaController();
 
 		//testes
-		ClientePF pf1 = new ClientePF(01, "João Vitor", "rua 1 n1, jaragua", "(11)9.1111-2222",
-				"111.222.333-44","joao@email.com");
+		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",1 ,"111.222.333-44");
 		pf1.visualizar();
 		
-		ClientePF pf2 = new ClientePF(02, "Maria Lucia", "Avenida Miguel Lima 404", "(11)9.9877-3214",
-				"345.222.489-44","maria_504@gmail.com");
+		ClientePF pf2 = new ClientePF(02, "Maria Lucia","maria_504@gmail.com", "Avenida Miguel Lima 404", "(11)9.9877-3214", 1, "222.333.444-55");
 		pf2.visualizar();
 		
-		ClientePF pf3 = new ClientePF(02, "Bianca Souza", "rua 34-506 ", "(11)9.95516-5588",
-				"346.222.4490-45","bi_souza@gmail.com");
+		ClientePF pf3 = new ClientePF(03, "Bianca Souza","bi_souza@gmail.com", "rua 34-506 ", "(11)9.95516-5588", 1, "333.444.555-66");
 		pf3.visualizar();
 		
 		
@@ -44,47 +41,26 @@ public class Menu {
 		
 		while (true) {
 
-			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND
-					+ "*************************************************                                                                                                                                                                                               ");
-
-			System.out.println(
-					"*************************************************                                                                                                                                                                                                ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                 ");
-			System.out.println(
-					"        ðŸ�”     HAMBURGUERIA SIRIGUEIJO      ðŸ�”                                                                                                                                                                                                                                                    ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                                                                 ");
-			System.out.println(
-					"*************************************************                                                                                                                                                                                                                                                ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                                                                 ");
-			System.out.println(
-					"              1-Cadastrar Clientes                                                                                                                                                                                                                                                               ");
-			System.out.println(
-					"              2-Procurar cliente por Id                                                                                                                                                                                                                                                                   ");
-			System.out.println(
-					"              3-Listar Todos os Clientes                                                                                                                                                                                                                                                                ");
-			System.out.println(
-					"              4-Atualizar cliente                                                                                                                                                                                                                                                       ");
-			System.out.println(
-					"              5-Fazer Pedido                                                                                                                                                                                                                                                        ");
-			System.out.println(
-					"              6-Listar Todos os Pedidos                                                                                                                                                                                                                                                                ");
-			System.out.println(
-					"              7-Cancelar Pedido                                                                                                                                                                                                                                                                             ");
-			System.out.println(
-					"              8-Sair                                                                                                                                                                                                                                                                             ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                                                                 ");
-			System.out.println(
-					"*************************************************                                                                                                                                                                                                                                                ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                                                                 ");
-			System.out.println(
-					"Digite a opção desejada:                                                                                                                                                                                                                                                                        ");
-			System.out.println(
-					"                                                                                                                                                                                                                                                                                                 ");
+			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*************************************************                                                                                                                                                                                               ");
+			System.out.println("*************************************************                                                                                                                                                                                                ");
+			System.out.println("                                                                                                                                                                                                                                                 ");
+			System.out.println("        ðŸ�”     HAMBURGUERIA SIRIGUEIJO      ðŸ�”                                                                                                                                                                                                                                                    ");
+			System.out.println("                                                                                                                                                                                                                                                                                                 ");
+			System.out.println("*************************************************                                                                                                                                                                                                                                                ");
+			System.out.println("                                                                                                                                                                                                                                                                                                 ");
+			System.out.println("              1-Cadastrar Clientes                                                                                                                                                                                                                                                               ");
+			System.out.println("              2-Procurar cliente por Id                                                                                                                                                                                                                                                                   ");
+			System.out.println("              3-Listar Todos os Clientes                                                                                                                                                                                                                                                                ");
+			System.out.println("              4-Atualizar cliente                                                                                                                                                                                                                                                       ");
+			System.out.println("              5-Fazer Pedido                                                                                                                                                                                                                                                        ");
+			System.out.println("              6-Listar Todos os Pedidos                                                                                                                                                                                                                                                                ");
+			System.out.println("              7-Cancelar Pedido                                                                                                                                                                                                                                                                             ");
+			System.out.println("              8-Sair                                                                                                                                                                                                                                                                             ");
+			System.out.println("                                                                                                                                                                                                                                                                                                 ");
+			System.out.println("*************************************************                                                                                                                                                                                                                                                ");
+			System.out.println("                                                                                                                                                                                                                                                                                                 ");
+			System.out.println("Digite a opção desejada:                                                                                                                                                                                                                                                                        ");
+			System.out.println("                                                                                                                                                                                                                                                                                                 ");
 			
 			try {
 				opcao = leia.nextInt();
@@ -107,29 +83,28 @@ public class Menu {
 			switch (opcao) {
 
 			case 1:
-				System.out.println(
-						"Cadastrar Clientes\n                                                                                                                                                                                                ");
-
-				System.out.println(
-						"Digite o nome do cliente:                                                                                                                                                                                                 ");
+				System.out.println("Cadastrar Clientes\n                                                                                                                                                                                                ");
+				System.out.println("Digite o nome do cliente:                                                                                                                                                                                                 ");
 				leia.skip("\\R");
 				cliente = leia.nextLine();
 
-				System.out.println(
-						"Digite o CPF do cliente:                                                                                                                                                                                                 ");
-				cpf = leia.nextLine();
-
-				System.out.println(
-						"Digite o endereço do cliente:                                                                                                                                                                                                 ");
-				endereco = leia.nextLine();
-
-				System.out.println(
-						"Digite o telefone do cliente:                                                                                                                                                                                                 ");
-				telefone = leia.nextLine();
+				do {
+					System.out.println("Digite o tipo de cliente (1-PF ou 2-PJ): ");
+					tipo = leia.nextInt();
+				}while (tipo < 1 && tipo > 2);
 				
-				System.out.println(
-						"Digite o e-mail do cliente:                                                                                                                                                                                                 ");
-				email = leia.nextLine();
+				switch (tipo) {
+				case 1:
+					System.out.println("Cliente Pessoa Fisica: ");
+					
+					clientes.cadastrar(new ClientePF(clientes.gerarId() id, nome, email, endereco, telefone, tipo, cpf));
+					break;
+					
+				case 2 :
+					System.out.println("Cliente Pessoa Juridica:");
+					break;
+				}
+		
 
 				keyPress();
 				break;

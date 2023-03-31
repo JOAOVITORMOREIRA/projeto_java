@@ -1,19 +1,22 @@
 package hamburgueria.model;
 
-public class Clientes {
+public abstract class Clientes {
 	
 	private int id;
 	private String nome;
 	private String email;
 	private String endereco;
 	private String telefone;
+	private int tipo;
 	
-	public Clientes(int id, String nome, String email, String endereco, String telefone) {
+	
+	public Clientes(int id, String nome, String email, String endereco, String telefone, int tipo) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.endereco = endereco;
 		this.telefone = telefone;
+		this.tipo = tipo;
 	}
 
 	public int getId() {
@@ -55,8 +58,28 @@ public class Clientes {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
+
 	
 	public void visualizar() {
+		
+		String tipo = "";
+		
+		switch (this.tipo) {
+		
+		case 1 : tipo = "Cliente Pessoa Fisica";
+		break;
+		case 2 : tipo = "Cliente Pessoa Juridica";
+		break;
+		
+		}
 		
 		System.out.println("*************************************************");
 		System.out.println("                 DADOS DO CLIENTE                ");
