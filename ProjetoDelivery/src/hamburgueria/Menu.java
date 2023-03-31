@@ -26,13 +26,15 @@ public class Menu {
 		//testes
 		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",1 ,"111.222.333-44");
 		pf1.visualizar();
+		clientes.cadastrar(pf1);
 		
 		ClientePF pf2 = new ClientePF(02, "Maria Lucia","maria_504@gmail.com", "Avenida Miguel Lima 404", "(11)9.9877-3214", 1, "222.333.444-55");
 		pf2.visualizar();
+		clientes.cadastrar(pf2);
 		
 		ClientePF pf3 = new ClientePF(03, "Bianca Souza","bi_souza@gmail.com", "rua 34-506 ", "(11)9.95516-5588", 1, "333.444.555-66");
 		pf3.visualizar();
-		
+		clientes.cadastrar(pf3);
 		
 
 		Produto po =new Produto("Xtudo",24.00);
@@ -97,7 +99,7 @@ public class Menu {
 				case 1:
 					System.out.println("Cliente Pessoa Fisica: ");
 					
-					clientes.cadastrar(new ClientePF(clientes.gerarId() id, nome, email, endereco, telefone, tipo, cpf));
+					
 					break;
 					
 				case 2 :
@@ -122,9 +124,8 @@ public class Menu {
 				break;
 
 			case 3:
-				System.out.println(
-						"Listar Todos os Clientes\n                                                                                                                                                                                                ");
-
+				System.out.println("Listar Todos os Clientes\n\n");   																																																														                                                                                                                                                                                            
+				clientes.listarTodosClientes();																					
 				keyPress();
 				break;
 
