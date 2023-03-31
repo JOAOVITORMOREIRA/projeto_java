@@ -1,6 +1,6 @@
 package hamburgueria.model;
 
-public class Clientes {
+public abstract class Clientes {
 	
 	private int id;
 	private String nome;
@@ -86,7 +86,7 @@ public class Clientes {
 		System.out.println("*************************************************");
 		System.out.println("ID do cliente: " + this.id);
 		System.out.println("Nome do cliente: " + this.nome);
-		System.out.println("Endereço do cliente:: " + this.endereco);
+		System.out.println("Endereï¿½o do cliente:: " + this.endereco);
 		System.out.println("Telefone do cliente: " + this.telefone);
 		System.out.println("Email do cliente: " + this.email);
 		

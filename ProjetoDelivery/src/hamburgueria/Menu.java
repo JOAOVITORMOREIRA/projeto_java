@@ -25,12 +25,12 @@ public class Menu {
 		HamburgueriaController clientes = new HamburgueriaController();
 		HamburgueriaController listaPedido = new HamburgueriaController();
 
-		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222", 1,
-				"111.222.333-44");
+		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222", 1,"111.222.333-44");
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*************************************************");
+			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND
+					+ "*************************************************");
 			System.out.println("*************************************************");
 			System.out.println("                                                 ");
 			System.out.println("         🍔    HAMBURGUERIA SIRIGUEIJO    🍔      ");
@@ -67,9 +67,9 @@ public class Menu {
 			switch (opcao) {
 
 			case 1:
-				System.out.println(Cores.TEXT_YELLOW + "------------ Cadastrar Clientes ------------\n" + Cores.TEXT_RESET);
-				
-				
+				System.out.println(
+						Cores.TEXT_YELLOW + "------------ Cadastrar Clientes ------------\n" + Cores.TEXT_RESET);
+
 				System.out.println("Digite o nome do cliente:");
 				leia.skip("\\R");
 				cliente = leia.nextLine();
@@ -92,28 +92,31 @@ public class Menu {
 				break;
 
 			case 2:
-				System.out.println(Cores.TEXT_YELLOW + "------------ Procurar cliente por Id ------------\n" + Cores.TEXT_RESET);
+				System.out.println(
+						Cores.TEXT_YELLOW + "------------ Procurar cliente por Id ------------\n" + Cores.TEXT_RESET);
 
 				System.out.println("Digite o id do cliente:");
 				id = leia.nextInt();
 
 				clientes.procurarPorId(id);
-				
+
 				System.out.println("\n");
 
 				keyPress();
 				break;
 
 			case 3:
-				System.out.println(Cores.TEXT_YELLOW + "------------ Listar Todos os Clientes ------------\n\n" + Cores.TEXT_RESET);
+				System.out.println(Cores.TEXT_YELLOW + "------------ Listar Todos os Clientes ------------\n\n"
+						+ Cores.TEXT_RESET);
 				clientes.listarTodosClientes();
 				keyPress();
 				break;
-			
+
 			case 4:
 				System.out.println(Cores.TEXT_YELLOW + "------------ Fazer Pedido ------------\n" + Cores.TEXT_RESET);
 
-				String[] hamburgueres = { "Burger de siri Classico", "Burger de siri Cheddar", "Burger de siri Bacon","Burger de siri Duplo" };
+				String[] hamburgueres = { "Burger de siri Classico", "Burger de siri Cheddar", "Burger de siri Bacon",
+						"Burger de siri Duplo" };
 				double[] precosHamburgueres = { 12.00, 15.00, 15.00, 20.00 };
 
 				String[] refrigerantes = { "Coca-Cola", "Guaraná", "Fanta", "Sprite", "Suco Natural" };
@@ -126,7 +129,7 @@ public class Menu {
 
 				do {
 
-					System.out.println(Cores.TEXT_CYAN + "---- Lista de Hambúrgueres:  "+ Cores.TEXT_RESET);
+					System.out.println(Cores.TEXT_CYAN + "---- Lista de Hambúrgueres:  " + Cores.TEXT_RESET);
 					for (int i = 0; i < hamburgueres.length; i++) {
 						System.out.println((i + 1) + ". " + hamburgueres[i] + " - R$" + precosHamburgueres[i]);
 					}
@@ -159,7 +162,7 @@ public class Menu {
 
 				do {
 
-					System.out.println(Cores.TEXT_CYAN + "---- Lista de Bebidas: "+ Cores.TEXT_RESET);
+					System.out.println(Cores.TEXT_CYAN + "---- Lista de Bebidas: " + Cores.TEXT_RESET);
 					for (int i = 0; i < refrigerantes.length; i++) {
 						System.out.println((i + 1) + ". " + refrigerantes[i] + " - R$" + precosRefrigerantes[i]);
 					}
@@ -169,7 +172,7 @@ public class Menu {
 
 					produto2.setNome(refrigerantes[escolhaRefrigerante - 1]);
 					produto2.setPreco(precosRefrigerantes[escolhaRefrigerante - 1]);
-					
+
 					totalPedido = totalPedido + precosRefrigerantes[escolhaRefrigerante - 1];
 
 					seguir = true;
@@ -207,7 +210,8 @@ public class Menu {
 	}
 
 	public static void sobre() {
-		System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*************************************************");
+		System.out.println(
+				Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*************************************************");
 		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("   Projeto Criado por:                           ");
