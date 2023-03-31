@@ -15,8 +15,8 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao,pedido, tipo, id;
-		String cliente, endereco, telefone, cpf, email, nome;
+		int opcao,pedido, tipo = 0, id;
+		String cliente, endereco, telefone, cpf, email;
 
 		float valor;
 		boolean seguir = true;
@@ -24,7 +24,7 @@ public class Menu {
 		HamburgueriaController clientes = new HamburgueriaController();
 
 		//testes
-		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",1 ,"111.222.333-44");
+		/*ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222",1 ,"111.222.333-44");
 		pf1.visualizar();
 		clientes.cadastrar(pf1);
 		
@@ -34,7 +34,7 @@ public class Menu {
 		
 		ClientePF pf3 = new ClientePF(03, "Bianca Souza","bi_souza@gmail.com", "rua 34-506 ", "(11)9.95516-5588", 1, "333.444.555-66");
 		pf3.visualizar();
-		clientes.cadastrar(pf3);
+		clientes.cadastrar(pf3);*/
 		
 
 		Produto po =new Produto("Xtudo",24.00);
@@ -89,36 +89,33 @@ public class Menu {
 				System.out.println("Digite o nome do cliente:                                                                                                                                                                                                 ");
 				leia.skip("\\R");
 				cliente = leia.nextLine();
-
-				do {
-					System.out.println("Digite o tipo de cliente (1-PF ou 2-PJ): ");
-					tipo = leia.nextInt();
-				}while (tipo < 1 && tipo > 2);
 				
-				switch (tipo) {
-				case 1:
-					System.out.println("Cliente Pessoa Fisica: ");
-					
-					
-					break;
-					
-				case 2 :
-					System.out.println("Cliente Pessoa Juridica:");
-					break;
-				}
-		
+				System.out.println("Digite o CPF do cliente:                                                                                                                                                                                                 ");
+				cpf = leia.nextLine();
 
+				System.out.println("Digite o endereço do cliente:                                                                                                                                                                                                 ");
+				endereco = leia.nextLine();
+
+				System.out.println("Digite o telefone do cliente:                                                                                                                                                                                                 ");
+				telefone = leia.nextLine();
+				
+				System.out.println("Digite o e-mail do cliente:                                                                                                                                                                                                 ");
+				email = leia.nextLine();
+				
+				clientes.cadastrar(new ClientePF(clientes.gerarId(), cliente, email, endereco, telefone, tipo, cpf));
+	
 				keyPress();
 				break;
+		
 
 			case 2:
-				System.out.println(
-						"Procurar cliente por Id\n                                                                                                                                                                                                ");
+				System.out.println("Procurar cliente por Id\n");
 
-				System.out.println(
-						"Digite o id do cliente:                                                                                                                                                                                                 ");
-				leia.skip("\\R");
-				//idCliente = leia.nextLine();
+				System.out.println("Digite o id do cliente:                                                                                                                                                                                                 ");
+				//leia.skip("\\R");
+				id = leia.nextInt();
+				
+				clientes.procurarPorId(id);
 
 				keyPress();
 				break;
@@ -130,8 +127,32 @@ public class Menu {
 				break;
 
 			case 4:
-				System.out.println(
-						"Atualizar cliente\n                                                                                                                                                                                                ");
+				System.out.println("Atualizar cliente\n");
+				
+				System.out.println("Digite a Id do cliente: ");
+				id = leia.nextInt();
+				
+				if (clientes.buscarNaCollection(id) != null) {
+					tipo =clientes.retornaTipo(id);
+					
+					System.out.println("Digite o nome do cliente:                                                                                                                                                                                                 ");
+					leia.skip("\\R");
+					cliente = leia.nextLine();
+					
+					System.out.println("Digite o CPF do cliente:                                                                                                                                                                                                 ");
+					cpf = leia.nextLine();
+
+					System.out.println("Digite o endereço do cliente:                                                                                                                                                                                                 ");
+					endereco = leia.nextLine();
+
+					System.out.println("Digite o telefone do cliente:                                                                                                                                                                                                 ");
+					telefone = leia.nextLine();
+					
+					System.out.println("Digite o e-mail do cliente:                                                                                                                                                                                                 ");
+					email = leia.nextLine();
+					
+					clientes.atualizar(new ClientePF(id, cliente, email, endereco, telefone, tipo, cpf));
+				}
 
 				keyPress();
 				break;

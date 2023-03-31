@@ -1,6 +1,6 @@
 package hamburgueria.model;
 
-public abstract class Clientes {
+public class Clientes {
 	
 	private int id;
 	private String nome;
