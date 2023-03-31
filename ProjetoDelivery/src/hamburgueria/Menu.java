@@ -29,11 +29,10 @@ public class Menu {
 
 		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222", 1,
 				"111.222.333-44");
-		pf1.visualizar();
-		clientes.cadastrar(pf1);
+		//clientes.cadastrar(pf1);
 
-		Produto po = new Produto("Xtudo", 24.00);
-		po.visualizar();
+//		Produto po = new Produto("Xtudo", 24.00);
+//		po.visualizar();
 
 		while (true) {
 
@@ -75,6 +74,8 @@ public class Menu {
 
 			case 1:
 				System.out.println("Cadastrar Clientes\n");
+				
+				
 				System.out.println("Digite o nome do cliente:");
 				leia.skip("\\R");
 				cliente = leia.nextLine();
@@ -210,8 +211,8 @@ public class Menu {
 	}
 
 	public static void sobre() {
-		
-		System.out.println("*************************************************" + Cores.TEXT_WHITE);
+		System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*************************************************");
+		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("   Projeto Criado por:                           ");
 		System.out.println("                                                 ");
@@ -219,31 +220,31 @@ public class Menu {
 		System.out.println("   Ana Vieira                                    ");
 		System.out.println("   GitHub: https://github.com/Aninhahouse        ");
 		System.out.println("                                                 ");
-		System.out.println("*************************************************");
+	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Andressa Camillo                              ");
 		System.out.println("   GitHub: https://github.com/Andressacamillo    ");
 		System.out.println("                                                 ");
-		System.out.println("*************************************************");
+	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Bruno Kauã                                    ");
 		System.out.println("   Ghttps://github.com/brunokauaal               ");
 		System.out.println("                                                 ");
-		System.out.println("*************************************************");
+//		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Giselle Souza                                 ");
 		System.out.println("   GitHub: https://github.com/gisellesouzaa      ");
 		System.out.println("                                                 ");
-		System.out.println("*************************************************");
+//		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   João Vitor Moreira                            ");
 		System.out.println("   GitHub: https://github.com/JOAOVITORMOREIRA   ");
 		System.out.println("                                                 ");
-		System.out.println("*************************************************");
+	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Yngrid Padilha                                ");
