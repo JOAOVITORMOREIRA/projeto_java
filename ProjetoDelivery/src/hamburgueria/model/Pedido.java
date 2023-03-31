@@ -60,7 +60,7 @@ public class Pedido {
 		System.out.println("*************************************************");
 		System.out.println("                 DADOS DO PEDIDO                 ");
 		System.out.println("*************************************************");
-		System.out.println("Parabéns o seu pedido foi realizado com sucesso!");
+		System.out.println("Parab�ns o seu pedido foi realizado com sucesso!");
 		/*System.out.println("Número do pedido:							 " );
 		System.out.println("Nome do cliente: " + this.cliente.getNome());
 		System.out.println("Nome do produto:: " + this.produtos.getNome());

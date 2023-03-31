@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import hamburgueria.model.Clientes;
 import hamburgueria.model.Pedido;
 import hamburgueria.repository.HamburgueriaRepository;
+import hamburgueria.util.Cores;
 
 public class HamburgueriaController implements HamburgueriaRepository {
 
@@ -19,7 +20,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 	@Override
 	public void cadastrar(Clientes cliente) {
 		listaClientes.add(cliente);
-		System.out.println("Foi criado o cadastro do cliente com id: " + cliente.getId() + " com sucesso!");
+		System.out.println(Cores.TEXT_CYAN + "\n Foi criado o cadastro do cliente com id: " + cliente.getId() + " com sucesso! \n" + Cores.TEXT_RESET);
 
 	}
 
@@ -30,7 +31,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 		if (cliente != null)
 			cliente.visualizar();
 		else
-			System.out.println("O cliente n√£o foi encontrado!");
+			System.out.println("O cliente n„o foi encontrado!");
 
 	}
 
@@ -47,7 +48,7 @@ public class HamburgueriaController implements HamburgueriaRepository {
 		if (listaClientes.contains(cliente.getNome())) {
 			// criar m√©todo para atualizar dados do cliente
 		} else {
-			System.out.println("O cliente n√£o est√° cadastrado!");
+			System.out.println("O cliente n„o est· cadastrado!");
 		}
 
 	}
@@ -97,10 +98,10 @@ public class HamburgueriaController implements HamburgueriaRepository {
 		for (Pedido pedido : listaPedidos) {
 			if (pedido.getNumeroPedido() == numeroPedido) {
 				listaPedidos.remove(pedido);
-				System.out.println("Pedido n√∫mero " + numeroPedido + " foi removido com sucesso!");
+				System.out.println("Pedido n˙mero " + numeroPedido + " foi removido com sucesso!");
 				return;
 			} else
-				System.out.println("Numero do pedido n√£o foi encontrado!");
+				System.out.println("Numero do pedido n„o foi encontrado!");
 		}
 
 	}

@@ -84,9 +84,9 @@ public class Clientes {
 		System.out.println("*************************************************");
 		System.out.println("                 DADOS DO CLIENTE                ");
 		System.out.println("*************************************************");
-		System.out.println("ID do cliente: ");
+		System.out.println("ID do cliente: " + this.id);
 		System.out.println("Nome do cliente: " + this.nome);
-		System.out.println("EndereÃ§o do cliente:: " + this.endereco);
+		System.out.println("Endereço do cliente:: " + this.endereco);
 		System.out.println("Telefone do cliente: " + this.telefone);
 		System.out.println("Email do cliente: " + this.email);
 		

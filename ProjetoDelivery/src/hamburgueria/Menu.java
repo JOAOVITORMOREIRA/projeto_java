@@ -25,14 +25,8 @@ public class Menu {
 		HamburgueriaController clientes = new HamburgueriaController();
 		HamburgueriaController listaPedido = new HamburgueriaController();
 
-		// testes
-
 		ClientePF pf1 = new ClientePF(01, "João Vitor", "joao@email.com", "rua 1 n1, jaragua", "(11)9.1111-2222", 1,
 				"111.222.333-44");
-		//clientes.cadastrar(pf1);
-
-//		Produto po = new Produto("Xtudo", 24.00);
-//		po.visualizar();
 
 		while (true) {
 
@@ -73,23 +67,23 @@ public class Menu {
 			switch (opcao) {
 
 			case 1:
-				System.out.println("Cadastrar Clientes\n");
+				System.out.println(Cores.TEXT_YELLOW + "------------ Cadastrar Clientes ------------\n" + Cores.TEXT_RESET);
 				
 				
 				System.out.println("Digite o nome do cliente:");
 				leia.skip("\\R");
 				cliente = leia.nextLine();
 
-				System.out.println("Digite o CPF do cliente:");
+				System.out.println("\nDigite o CPF do cliente:");
 				cpf = leia.nextLine();
 
-				System.out.println("Digite o endereço do cliente:");
+				System.out.println("\nDigite o endereço do cliente:");
 				endereco = leia.nextLine();
 
-				System.out.println("Digite o telefone do cliente:");
+				System.out.println("\nDigite o telefone do cliente:");
 				telefone = leia.nextLine();
 
-				System.out.println("Digite o e-mail do cliente:");
+				System.out.println("\nDigite o e-mail do cliente:");
 				email = leia.nextLine();
 
 				clientes.cadastrar(new ClientePF(clientes.gerarId(), cliente, email, endereco, telefone, tipo, cpf));
@@ -98,24 +92,26 @@ public class Menu {
 				break;
 
 			case 2:
-				System.out.println("Procurar cliente por Id\n");
+				System.out.println(Cores.TEXT_YELLOW + "------------ Procurar cliente por Id ------------\n" + Cores.TEXT_RESET);
 
 				System.out.println("Digite o id do cliente:");
 				id = leia.nextInt();
 
 				clientes.procurarPorId(id);
+				
+				System.out.println("\n");
 
 				keyPress();
 				break;
 
 			case 3:
-				System.out.println("Listar Todos os Clientes\n\n");
+				System.out.println(Cores.TEXT_YELLOW + "------------ Listar Todos os Clientes ------------\n\n" + Cores.TEXT_RESET);
 				clientes.listarTodosClientes();
 				keyPress();
 				break;
 			
 			case 4:
-				System.out.println("------------ Fazer Pedido ------------\n");
+				System.out.println(Cores.TEXT_YELLOW + "------------ Fazer Pedido ------------\n" + Cores.TEXT_RESET);
 
 				String[] hamburgueres = { "Burger de siri Classico", "Burger de siri Cheddar", "Burger de siri Bacon","Burger de siri Duplo" };
 				double[] precosHamburgueres = { 12.00, 15.00, 15.00, 20.00 };
@@ -130,12 +126,12 @@ public class Menu {
 
 				do {
 
-					System.out.println("- Lista de Hambúrgueres:  ");
+					System.out.println(Cores.TEXT_CYAN + "---- Lista de Hambúrgueres:  "+ Cores.TEXT_RESET);
 					for (int i = 0; i < hamburgueres.length; i++) {
 						System.out.println((i + 1) + ". " + hamburgueres[i] + " - R$" + precosHamburgueres[i]);
 					}
 
-					System.out.print("Escolha um hamburguer (1-" + hamburgueres.length + "): ");
+					System.out.print("\nEscolha um hamburguer (1-" + hamburgueres.length + "): ");
 
 					escolhaHamburguer = leia.nextInt();
 
@@ -149,7 +145,7 @@ public class Menu {
 
 					totalPedido = totalPedido + precosHamburgueres[escolhaHamburguer - 1];
 
-					System.out.print("Deseja pedir mais um hamburguer? Digite S/N \n");
+					System.out.print("\nDeseja pedir mais um hamburguer? Digite S/N \n");
 					String resposta = leia.next();
 
 					if (resposta.toLowerCase().equals("n")) {
@@ -163,12 +159,12 @@ public class Menu {
 
 				do {
 
-					System.out.println("- Lista de Bebidas: ");
+					System.out.println(Cores.TEXT_CYAN + "---- Lista de Bebidas: "+ Cores.TEXT_RESET);
 					for (int i = 0; i < refrigerantes.length; i++) {
 						System.out.println((i + 1) + ". " + refrigerantes[i] + " - R$" + precosRefrigerantes[i]);
 					}
 
-					System.out.print("Escolha uma bebida (1-" + refrigerantes.length + "): ");
+					System.out.print("\nEscolha uma bebida (1-" + refrigerantes.length + "): ");
 					int escolhaRefrigerante = leia.nextInt();
 
 					produto2.setNome(refrigerantes[escolhaRefrigerante - 1]);
@@ -178,13 +174,13 @@ public class Menu {
 
 					seguir = true;
 
-					System.out.print("Deseja pedir mais uma bebiba? Digite S/N \n");
+					System.out.print("\nDeseja pedir mais uma bebiba? Digite S/N \n");
 					String resposta = leia.next();
 
 					if (resposta.toLowerCase().equals("n")) {
 						seguir = false;
 					} else if (!resposta.toLowerCase().equals("n") && !resposta.toLowerCase().equals("s")) {
-						System.out.println("Opção inválida. Digite 'S' ou 'N' \n");
+						System.out.println("\nOpção inválida. Digite 'S' ou 'N' \n");
 					}
 					;
 
@@ -195,7 +191,7 @@ public class Menu {
 				listaPedido.fazerPedido(pedido1);
 				listaPedido.listarTodosPedidos();
 
-				System.out.println("Valor total do pedido: R$ " + totalPedido + "    ");
+				System.out.println("\nValor total do pedido: R$ " + totalPedido + "    ");
 
 				keyPress();
 				break;
@@ -220,31 +216,26 @@ public class Menu {
 		System.out.println("   Ana Vieira                                    ");
 		System.out.println("   GitHub: https://github.com/Aninhahouse        ");
 		System.out.println("                                                 ");
-	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Andressa Camillo                              ");
 		System.out.println("   GitHub: https://github.com/Andressacamillo    ");
 		System.out.println("                                                 ");
-	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Bruno Kauã                                    ");
 		System.out.println("   Ghttps://github.com/brunokauaal               ");
 		System.out.println("                                                 ");
-//		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Giselle Souza                                 ");
 		System.out.println("   GitHub: https://github.com/gisellesouzaa      ");
 		System.out.println("                                                 ");
-//		System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   João Vitor Moreira                            ");
 		System.out.println("   GitHub: https://github.com/JOAOVITORMOREIRA   ");
 		System.out.println("                                                 ");
-	//	System.out.println("*************************************************");
 		System.out.println("                                                 ");
 		System.out.println("*************************************************");
 		System.out.println("   Yngrid Padilha                                ");
